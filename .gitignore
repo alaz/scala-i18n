@@ -1,0 +1,9 @@
+pom.xml
+*~
+*.iml
+/target
+/project/target/
+/project/project/target/
+/.ensime
+.DS_Store
+/.idea/
