@@ -30,7 +30,7 @@ You would use `Messages` so:
 ```scala
 implicit val userLang = Lang("en")
 
-val msg = Messages("greet", userLang)
+val msg = Messages("greet")(userLang)
 ```
 
 # Localized
@@ -58,6 +58,14 @@ val email =
     val text = Messages("email.text")
     s"$greet $text"
   }
+```
+
+# Using
+
+In SBT:
+
+```
+val i18n = "com.osinka.i18n" %% "scala-i18n" % "1.0.0"
 ```
 
 # Credits
