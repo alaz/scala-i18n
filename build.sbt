@@ -14,7 +14,7 @@ licenses += "Apache License, Version 2.0" -> url("http://www.apache.org/licenses
 
 organizationName := "Osinka"
 
-description := """MongoDB Document parser combinators and builders"""
+description := """Play-like internationalized messages for any Scala"""
 
 scalacOptions ++= List("-deprecation", "-unchecked", "-feature")
 
