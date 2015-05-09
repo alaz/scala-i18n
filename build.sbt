@@ -6,9 +6,9 @@ homepage := Some(url("https://github.com/osinka/scala-i18n"))
 
 startYear := Some(2014)
 
-scalaVersion := "2.11.2"
+scalaVersion := "2.11.6"
 
-crossScalaVersions := Seq("2.11.2", "2.10.4")
+crossScalaVersions := Seq("2.11.6", "2.10.5")
 
 licenses += "Apache License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
 
@@ -19,7 +19,7 @@ description := """Play-like internationalized messages for any Scala"""
 scalacOptions ++= List("-deprecation", "-unchecked", "-feature")
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "2.2.2" % "test"
+  "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 )
 
 credentials <+= (version) map { version: String =>
