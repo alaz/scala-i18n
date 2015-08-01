@@ -13,4 +13,4 @@ cache:
   - $HOME/.sbt/boot/
 notifications:
   slack:
-    secure: Z8XOOOab7PxM5exXUhgI8chEAHYOXhTtrannBbGBFeWJ+3RWzs04AOA5RHj5Ad8dGqlJ2l5qlAxJvkw4yr5hha65hr8K2Dg42/QpF+8Qke7/I3PuFri6NCQba81yu/Zh2C+uI3kOJER7vMx9PNxYS78yWJWuGE3nIvq21SkpOvE=
+    secure: Vjj2xom6qY/usZdqgu2temoF80gbAwfq65jVLD8kuwzUCxhwTz8+NmFsDkkdZyALrzKl+D2PFo3d3IQM+Q1Yz+L30wQYNkyLUXulSPc6DhzNe7gpdEVoKfNIkOZpPKw0nQoTealsyFQor4hI9DZANfUVxeW4iZhCce9mmC8w3Lo=
