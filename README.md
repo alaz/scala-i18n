@@ -1,3 +1,6 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.osinka.i18n/scala-i18n_2.11/badge.png)](https://maven-badges.herokuapp.com/maven-central/com.osinka.i18n/scala-i18n_2.11)
+[![Build Status](https://travis-ci.org/osinka/scala-i18n.svg?branch=master)](https://travis-ci.org/osinka/scala-i18n)
+
 # Introduction
 
 Small library to support i18n messages in Scala "just like in Play Framework".
