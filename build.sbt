@@ -34,7 +34,7 @@ pomIncludeRepository := { x => false }
 publishTo <<= (version) { version: String =>
   Some(
     if (version.trim endsWith "SNAPSHOT")
-      "Osinka Internal Repo" at "http://repo.osinka.int/content/repositories/snapshots/"
+      "Osinka Internal Repo" at "https://r.osinka.co/content/repositories/snapshots/"
     else
       "Sonatype OSS Staging" at "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
   )
