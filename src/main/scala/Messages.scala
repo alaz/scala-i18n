@@ -27,7 +27,7 @@ object Messages {
   /** get the message w/o formatting */
   def raw(msg: String)(implicit lang: Lang): String = {
     val bundle = ResourceBundle.getBundle(FileName, lang.locale, UTF8BundleControl)
-    bundle.getString(msg)
+    bundle.getString(msg).replaceAll("'", "''")
   }
 
   def apply(msg: String, args: Any*)(implicit lang: Lang): String = {
