@@ -42,7 +42,7 @@ private[i18n] object UTF8BundleControl extends ResourceBundle.Control {
   val FallbackLocale = new Locale("")
 
   override def getFormats(baseName: String): java.util.List[String] = {
-    import collection.convert.decorateAsJava._
+    import collection.JavaConverters._
 
     Seq(Format).asJava
   }
