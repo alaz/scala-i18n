@@ -1,10 +1,10 @@
 sudo: false
 language: scala
 scala:
-- 2.10.5
-- 2.11.6
+- 2.12.1
+- 2.11.8
 jdk:
-- oraclejdk7
+- oraclejdk8
 script:
 - sbt -Dfile.encoding=UTF8 -no-colors ++$TRAVIS_SCALA_VERSION test
 cache:

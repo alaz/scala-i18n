@@ -6,9 +6,9 @@ homepage := Some(url("https://github.com/osinka/scala-i18n"))
 
 startYear := Some(2014)
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.1"
 
-crossScalaVersions := Seq("2.11.8", "2.12.0")
+crossScalaVersions := Seq("2.11.8", "2.12.1")
 
 licenses += "Apache License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
 
@@ -22,18 +22,18 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 )
 
-credentials <+= (version) map { version: String =>
+credentials += {
   val file =
-    if (version.trim endsWith "SNAPSHOT") "credentials_osinka"
+    if (version.value.trim endsWith "SNAPSHOT") "credentials_osinka"
     else "credentials_sonatype"
   Credentials(Path.userHome / ".ivy2" / file)
 }
 
 pomIncludeRepository := { x => false }
 
-publishTo <<= (version) { version: String =>
+publishTo := {
   Some(
-    if (version.trim endsWith "SNAPSHOT")
+    if (version.value.trim endsWith "SNAPSHOT")
       "Osinka Internal Repo" at "https://r.osinka.co/content/repositories/snapshots/"
     else
       "Sonatype OSS Staging" at "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
