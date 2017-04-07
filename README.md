@@ -33,7 +33,7 @@ You would use `Messages` so:
 ```scala
 implicit val userLang = Lang("en")
 
-val msg = Messages("greet")(userLang)
+val msg = Messages("greet")
 ```
 
 # Localized
