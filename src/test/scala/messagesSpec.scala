@@ -24,5 +24,14 @@ class messagesSpec extends FunSpec with Matchers {
         Messages("nokey")(RU)
       }
     }
+    it("should throw if no resource") {
+      object NoResourceMessage extends Messages {
+        override val FileName = "nonexistant"
+      }
+
+      intercept[java.util.MissingResourceException] {
+        NoResourceMessage("nokey")(EN)
+      }
+    }
   }
 }

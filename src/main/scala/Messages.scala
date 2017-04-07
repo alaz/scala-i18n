@@ -20,7 +20,7 @@ import java.util.{ResourceBundle, Locale}
   *
   * Messages are formatted with `java.text.MessageFormat`.
   */
-object Messages {
+trait Messages {
   val FileName = "messages"
   val FileExt = "txt"
 
@@ -35,11 +35,12 @@ object Messages {
   }
 }
 
+object Messages extends Messages
+
 // @see https://gist.github.com/alaz/1388917
 // @see http://stackoverflow.com/questions/4659929/how-to-use-utf-8-in-resource-properties-with-resourcebundle
 private[i18n] object UTF8BundleControl extends ResourceBundle.Control {
   val Format = "properties.utf8"
-  val FallbackLocale = new Locale("")
 
   override def getFormats(baseName: String): java.util.List[String] = {
     import collection.JavaConverters._
@@ -47,7 +48,9 @@ private[i18n] object UTF8BundleControl extends ResourceBundle.Control {
     Seq(Format).asJava
   }
 
-  override def getFallbackLocale(baseName: String, locale: Locale) = FallbackLocale
+  override def getFallbackLocale(baseName: String, locale: Locale) =
+    if (locale == Locale.getDefault) null
+    else Locale.getDefault
 
   override def newBundle(baseName: String, locale: Locale, fmt: String, loader: ClassLoader, reload: Boolean): ResourceBundle = {
     import java.util.PropertyResourceBundle
