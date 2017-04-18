@@ -6,9 +6,9 @@ homepage := Some(url("https://github.com/osinka/scala-i18n"))
 
 startYear := Some(2014)
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.13.0"
 
-crossScalaVersions := Seq("2.11.8", "2.12.1")
+crossScalaVersions := Seq("2.11.11", "2.12.8", "2.13.0")
 
 licenses += "Apache License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
 
@@ -19,7 +19,7 @@ description := """Play-like internationalized messages for any Scala"""
 scalacOptions ++= List("-deprecation", "-unchecked", "-feature")
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+  "org.scalatest" %% "scalatest" % "3.0.8" % "test"
 )
 
 credentials += {
@@ -39,8 +39,6 @@ publishTo := {
       "Sonatype OSS Staging" at "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
   )
 }
-
-useGpg := true
 
 pomExtra := <xml:group>
     <developers>
