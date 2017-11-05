@@ -11,6 +11,3 @@ cache:
   directories:
   - $HOME/.ivy2/cache
   - $HOME/.sbt/boot/
-notifications:
-  slack:
-    secure: Vjj2xom6qY/usZdqgu2temoF80gbAwfq65jVLD8kuwzUCxhwTz8+NmFsDkkdZyALrzKl+D2PFo3d3IQM+Q1Yz+L30wQYNkyLUXulSPc6DhzNe7gpdEVoKfNIkOZpPKw0nQoTealsyFQor4hI9DZANfUVxeW4iZhCce9mmC8w3Lo=
