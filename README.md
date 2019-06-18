@@ -68,7 +68,7 @@ val email =
 In SBT:
 
 ```
-val i18n = "com.osinka.i18n" %% "scala-i18n" % "1.0.2"
+val i18n = "com.osinka.i18n" %% "scala-i18n" % "1.0.3"
 ```
 
 # Credits
