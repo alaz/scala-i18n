@@ -6,9 +6,14 @@ homepage := Some(url("https://github.com/osinka/scala-i18n"))
 
 startYear := Some(2014)
 
-scalaVersion := "2.13.0"
+val Scala211 = "2.11.12"
+val Scala212 = "2.12.19"
+val Scala213 = "2.13.14"
+val Scala3 = "3.5.0"
 
-crossScalaVersions := Seq("2.11.11", "2.12.8", "2.13.0")
+scalaVersion := Scala213
+
+crossScalaVersions := Seq(Scala211, Scala212, Scala213, Scala3)
 
 licenses += "Apache License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
 
@@ -18,9 +23,7 @@ description := """Play-like internationalized messages for any Scala"""
 
 scalacOptions ++= List("-deprecation", "-unchecked", "-feature")
 
-libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.8" % "test"
-)
+libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.2.19" % Test)
 
 credentials += {
   val file =
