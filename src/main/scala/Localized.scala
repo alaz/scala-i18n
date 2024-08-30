@@ -40,7 +40,7 @@ object Localized {
     fn( localized.locale(a) )
   }
 
-  implicit def optionLocalized[T](implicit localized: Localized[T]) =
+  implicit def optionLocalized[T](implicit localized: Localized[T]): Localized[Option[T]] =
     new Localized[Option[T]] {
       override def locale(o: Option[T]) =
         o map(localized.locale) getOrElse Lang.Default

@@ -1,8 +1,10 @@
 package com.osinka.i18n
 
-import org.scalatest.{Matchers, FunSpec}
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.must.Matchers
+import org.scalatest.matchers.should.Matchers._
 
-class messagesSpec extends FunSpec with Matchers {
+class messagesSpec extends AnyFunSpec with Matchers {
   val EN = Lang("en")
   val RU = Lang("ru")
 
